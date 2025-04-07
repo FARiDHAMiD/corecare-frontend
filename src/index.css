@@ -1,0 +1,15 @@
+nav {
+  font-size: large;
+}
+
+.nav-item {
+  margin-left: 35px;
+}
+
+.text-green {
+  color: lawngreen;
+}
+
+.text-navy {
+  color: navy;
+}
