@@ -45,6 +45,7 @@ const Team = () => {
                 <div
                   className="col-lg-3 col-md-6 wow fadeInUp"
                   data-wow-delay="0.1s"
+                  key={doctor.id}
                 >
                   <div className="team-item position-relative rounded overflow-hidden">
                     <Link to={`/doctor/${doctor.id}`} style={{textDecoration: 'none'}}>
@@ -54,7 +55,7 @@ const Team = () => {
                     </Link>
                       <div className="team-text bg-light text-center p-4">
                         <h5>
-                          {doctor.first_name} {doctor.last_name}
+                          {doctor.user.first_name} {doctor.user.last_name}
                         </h5>
                         <p className="text-primary">{doctor.department}</p>
                         <div className="team-social text-center">

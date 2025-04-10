@@ -167,13 +167,25 @@ const Nav = () => {
               </NavLink>
             )}
           </div>
+          {user ? (
+
           <NavLink
-            to="/appointment"
+            to={`/appointment/${user.profile_id}`}
             className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
           >
             Appointment
             <i className="fa fa-arrow-right ms-3" />
           </NavLink>
+          ):(
+          <NavLink
+            to={`/login`}
+            className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
+          >
+            Appointment
+            <i className="fa fa-arrow-right ms-3" />
+          </NavLink>
+
+          )}
         </div>
       </nav>
       {/* Navbar End */}
