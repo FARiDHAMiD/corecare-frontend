@@ -6,6 +6,7 @@ import AuthContext from "../Context/AuthContext";
 import { Link, useParams } from "react-router-dom";
 import PatientsAppointments from "../Components/PatientsAppointments";
 import { toast } from "react-toastify";
+import UploadReportModal from "../Components/UploadReportModal";
 
 const Profile = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const Profile = () => {
     height: "",
     bmi: "",
   };
-  
+
   // Use Form hook
   const {
     handleSubmit,
@@ -141,8 +142,12 @@ const Profile = () => {
                         </p>
                         <p className="mb-0 text-uppercase">
                           <i className="fas fa-link ms-4 me-2" />{" "}
-                          <span className="text-muted small">
-                            upload report
+                          <span
+                            className="text-muted small"
+                            data-bs-toggle="modal"
+                            data-bs-target="#uploadReportModal"
+                          >
+                            my reports
                           </span>
                         </p>
                         <p className="mb-0 text-uppercase">
@@ -326,6 +331,9 @@ const Profile = () => {
             </div>
           </div>
         </div>
+      </>
+      <>
+        <UploadReportModal />
       </>
     </>
   );
