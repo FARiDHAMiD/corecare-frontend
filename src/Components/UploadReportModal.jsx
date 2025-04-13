@@ -47,7 +47,7 @@ const UploadReportModal = ({ patientId }) => {
   useEffect(() => {
     fetchReportTypes();
     getPatientReports();
-  }, [patientReports]);
+  }, []);
 
   // Handle form submission to upload the report
   const uploadReport = async (data) => {
